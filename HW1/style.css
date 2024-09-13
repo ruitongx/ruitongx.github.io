@@ -1,0 +1,514 @@
+
+
+/* ---------------------------------- Disable Horizontal Scrolling ---------------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevent horizontal scrolling */
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+
+
+/* ------------------------------------------------------ Main Content: --------------------------------------------------- */
+/* -------------------------------- Upperlayer Section: -------------------------------- */
+.main-content {
+    position: relative;
+    z-index: 1; /* Higher than the background image */
+    width: 100%;
+    background: transparent;
+    margin:0;
+}
+
+/* -------------------------- Top Padding: --------------------------- */
+/* navigation links on a white padding */
+.top-padding-with-nav {
+    position: relative;
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align navigation links to the right */
+    align-items: center; /* Vertically center the links */
+    background-color: white;
+    padding: 0;
+    margin-bottom:0;
+    width: 100%;      /* full width horizontally */
+    height: 100px; 
+    z-index: 1; /* Ensure it's on top */
+}
+/* Navigation link position */
+nav {
+    position: absolute;
+    font-size: 12px;
+    right: 250px;
+}
+
+/* Navigation link layout */
+nav ul{
+    display: flex; /* spread horizontally */
+    list-style-type: none; /*removes the bullet points from each link*/
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    align-items: center; /* New added to center links vertically */
+}
+/* Navigation link color */
+nav ul li a {
+    color: rgb(183, 181, 181);
+    text-decoration: none;  /*removes the underline from the links*/
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+  
+nav ul li a:hover {
+    color: black;
+}
+
+#menu {
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    font-family: Arial, sans-serif;
+    left: 13%;
+}
+
+
+/* ----------------- Upper layer: Layout and position ---------------- */
+.upperlayer {
+   display: block;
+   position: relative; /* so the images can be scrolled down normally */
+   z-index: 1; /* on top of the background image*/
+   width: 100%;
+   padding: 0;
+   margin-top: 0; 
+   
+   
+}
+
+
+/* ----------------- Image: lawyer & sign-up form ---------------- */
+.signup-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+ 
+
+#lawyer{
+    display: block;
+    width: 1512px;
+    height: 706px;
+    padding: 0;
+    object-fit: cover;
+}
+
+.form {
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    padding: 40px;
+    padding-bottom: 60px;
+    width: 20%;
+    background-color: rgb(0, 67, 105);
+    color: white;
+    text-align: left;
+}
+
+.form h5{
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: white;
+    margin-bottom:0;
+}
+
+.form h1{
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 36px;
+    color: white;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+.form p{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color:#ffee00;
+    margin-bottom:20px;
+}
+
+form input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+  }
+
+.form button {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    background-color:#ffee00;
+    color: black;
+    border: none;
+    padding: 14px;
+    width: 50%;
+    font-size: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form {
+        top: 15%; /* Adjust top positioning for smaller screens */
+        left: 10%; /* Adjust left positioning for better centering */
+        width: 30%; /* Increase width for better readability */
+    }
+    #lawyer {
+        clip-path: inset(0% 0% 5% 0%); /* Decrease clipping to show more image */
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        top: 10%;
+        left: 5%;
+        width: 50%; /* Further increase width on very small screens */
+    }
+    #lawyer {
+        margin-top: 15px;
+    }
+}
+
+
+/* ----------------- Feature Table: ---------------- */
+/* Feature Table: Wrapper to set the entire horizontal background to white*/
+.featuretable-wrapper {
+    width: 100%; /* make the wrapper take full width */
+    background-color: white;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    margin: 0;
+}
+
+/*Feature Table: Position, Layout, color*/
+.feature-table {
+    /*position*/
+    width: 70%;
+    margin-left: auto; /* center the table*/
+    margin-right: auto; /* center the table*/
+    /*Layout*/
+    border-spacing: 15px; /* between the rows*/
+    /*table style & color*/
+    text-align: left;
+    background-color: transparent;
+}
+
+/* Feature Table Header (th): Font and color customization */
+.feature-table th {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 14px; 
+    color: #333333; 
+}
+
+/* Feature Table Data (td): Font and color customization */
+.feature-table td {
+    font-family: Arial, sans-serif;
+    font-size: 13px; 
+    color: rgb(168, 169, 169);
+}
+
+
+/* ----------------- CEO Quote: ---------------- */
+/* CEO Quote: Wrapper*/
+.quote-wrapper {
+    width: 100%; /* make the wrapper take full width */
+    background-color: #f0f0f0;
+    padding-top: 135px;
+    padding-bottom: 135px;
+}
+
+/* CEO Quote: line 1 style*/
+.quote-wrapper #quote {
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 18px; 
+    color: black; 
+    text-align: center;
+}
+
+/* CEO Quote: line 2 style*/
+.quote-wrapper #founder {
+    font-family: Helvetica;
+    font-size: 12px; 
+    text-align: center;
+}
+.quote-wrapper #founder .name {
+    font-weight: bold;
+    color: black; 
+}
+.quote-wrapper #founder .title {
+    color: rgb(142, 136, 136); 
+}
+
+
+/* ----------------- Prices & Plans: --------------- */
+/* Prices: Wrapper*/
+.price-wrapper {
+    width: 100%; /* make the wrapper take full width */
+    background-color: rgba(223, 223, 223, 0.90);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 1; 
+}
+
+/* Prices: line 1 head style*/
+.price-wrapper #prices {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 18px; 
+    color: black; 
+    text-align: center;
+}
+
+/* Prices: line 2 head style*/
+.price-wrapper #affordability {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px; 
+    color: rgb(155, 159, 161); 
+    display: flex;
+    flex-direction: column; /* Ensures that prices and affordability are stacked vertically */
+    align-items: center; /* Centers the header and the price plans */
+}
+
+/* Prices: layout for the three blocks*/
+.price-wrapper ul {
+    display: flex; /* spread horizontally */
+    justify-content: center;
+    list-style-type: none; /*removes the bullet points from each link*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    gap: 30px;
+    color:white;  
+}
+
+.plan-block {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.plan-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+                45deg,
+                rgba(0,0,0,0),
+                rgba(0,0,0,0) 9px,
+                rgba(0,0,0,0.05) 10px),
+              repeating-linear-gradient(
+                135deg,
+                rgba(0,0,0,0),
+                rgba(0,0,0,0) 9px,
+                rgba(0,0,0,0.05) 10px),
+              repeating-linear-gradient(
+                0deg,
+                rgba(0,0,0,0),
+                rgba(0,0,0,0) 9px,
+                rgba(0,0,0,0.05) 10px),
+              repeating-linear-gradient(
+                90deg,
+                rgba(0,0,0,0),
+                rgba(0,0,0,0) 9px,
+                rgba(0,0,0,0.05) 10px);
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 2; /* Above the content but below interactive elements */
+}
+
+/* Prices: style for headers in the text area*/
+.plan-header {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 15px; 
+    color: rgb(58, 56, 56); 
+    text-align: center;
+}
+/* Prices: style for features in the text area*/
+.plan-feature {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px; 
+    color: rgb(96, 91, 91); 
+    text-align: center;
+}
+/* Prices: style for prices in the text area*/
+.plan-price {
+    font-family: Arial, sans-serif;
+    font-size: 26px; 
+    color: rgb(58, 56, 56); 
+    text-align: center;
+}
+.buynow-button {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    background-color: rgb(0, 67, 105); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Ensure the button is clickable */
+    pointer-events: auto; /* Allow interactions on the button */
+}
+
+
+/* ----------------- Image: notebook and 'Try it for free' ---------------- */
+/*wraps notebook image and the overlay together*/
+.notebook-wrapper {
+    display: block;
+    position: relative;
+    display: inline-block; /* Allows for easy positioning around the image */
+    width: 100%;
+    height: 100%;
+    /* height:50vh; */
+    overflow: hidden;
+    margin-bottom: 0; /* Ensure no space at the bottom */
+}
+#notebook{
+    display: block;
+    /* width:100%; */
+    /* height:100%; */
+    width: 1512px;
+    height: 450px;
+    object-fit: cover;
+}
+
+/*positioned the overlay absolutely over the image, 
+with flexbox used to center the text and button vertically and horizontally.*/
+.notebook-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 67, 105, 0.781);
+
+    color: white; /* Color for the text on the overlay */
+    display: flex; /*create a flexbox layout*/
+    flex-direction: column;
+    justify-content: center; /* Centers the content (text and button) */
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none; /* Prevents the overlay from blocking image interactions, if needed */
+}
+
+.notebook-overlay h1 {
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+}
+.notebook-overlay p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+}
+.notebook-button {
+    margin-top: 20px;
+    padding: 15px 45px;
+    background-color: #ffee00; 
+
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: black;
+
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Ensure the button is clickable */
+    pointer-events: auto; /* Allow interactions on the button */
+}
+
+
+/* ----------------- Social Media Accounts: --------------- */
+.social-wrapper {
+    position: relative;
+    background-color: rgb(13, 31, 46);
+    width: 100%;
+    height: 260px;
+    z-index: 2;
+    display: flex; /* Enables flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    overflow: hidden;
+    margin-top: -9px; 
+}
+
+.social-wrapper h3 {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: white; /* Make text visible against dark background */
+    text-align: center;
+}
+
+.social-wrapper p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+    color: white; /* Make text visible against dark background */
+    text-align: center;
+    /* margin-bottom: 15px; */
+}
+
+.social-wrapper ul{
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    list-style-type: none;
+    margin: 35px;
+    padding: 0;
+    gap: 30px;
+}
+
+.social-wrapper ul li img {
+    width: 28px; /* Adjust the size of the icons */
+    height: auto;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- Background Images Section: ---------------------------------------------- */
+.background-image {
+    background-image: url('images/glasses.png');
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* fix the background */
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0; 
+    z-index: 0;
+}
