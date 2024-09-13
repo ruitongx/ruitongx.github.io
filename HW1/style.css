@@ -258,7 +258,7 @@ form input[type="text"] {
 /* Prices: Wrapper*/
 .price-wrapper {
     width: 100%; /* make the wrapper take full width */
-    background-color: rgba(223, 223, 223, 0.90);
+    background-color: rgb(239 241 246 / 90%);
     padding-top: 40px;
     padding-bottom: 40px;
     z-index: 1; 
@@ -482,7 +482,7 @@ with flexbox used to center the text and button vertically and horizontally.*/
     display: flex;
     justify-content: center; /* Center the icons horizontally */
     list-style-type: none;
-    margin: 35px;
+    /* margin: 35px; */
     padding: 0;
     gap: 30px;
 }
