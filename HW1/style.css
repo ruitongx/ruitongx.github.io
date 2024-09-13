@@ -25,15 +25,15 @@ html, body {
 /* navigation links on a white padding */
 .top-padding-with-nav {
     position: relative;
-    display: flex; /* Enable flexbox */
+    display: flex; 
     justify-content: flex-end; /* Align navigation links to the right */
     align-items: center; /* Vertically center the links */
     background-color: white;
     padding: 0;
     margin-bottom:0;
-    width: 100%;      /* full width horizontally */
+    width: 100%; 
     height: 100px; 
-    z-index: 1; /* Ensure it's on top */
+    z-index: 1; /* on top */
 }
 /* Navigation link position */
 nav {
@@ -49,12 +49,12 @@ nav ul{
     margin: 0;
     padding: 0;
     gap: 20px;
-    align-items: center; /* New added to center links vertically */
+    align-items: center; /* center links vertically */
 }
 /* Navigation link color */
 nav ul li a {
     color: rgb(183, 181, 181);
-    text-decoration: none;  /*removes the underline from the links*/
+    text-decoration: none; 
     font-family: Arial, sans-serif;
     font-size: 12px;
 }
@@ -158,34 +158,11 @@ form input[type="text"] {
     margin-top: 10px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .form {
-        top: 15%; /* Adjust top positioning for smaller screens */
-        left: 10%; /* Adjust left positioning for better centering */
-        width: 30%; /* Increase width for better readability */
-    }
-    #lawyer {
-        clip-path: inset(0% 0% 5% 0%); /* Decrease clipping to show more image */
-    }
-}
-
-@media (max-width: 480px) {
-    .form {
-        top: 10%;
-        left: 5%;
-        width: 50%; /* Further increase width on very small screens */
-    }
-    #lawyer {
-        margin-top: 15px;
-    }
-}
-
 
 /* ----------------- Feature Table: ---------------- */
 /* Feature Table: Wrapper to set the entire horizontal background to white*/
 .featuretable-wrapper {
-    width: 100%; /* make the wrapper take full width */
+    width: 100%; 
     background-color: white;
     padding-top: 135px;
     padding-bottom: 135px;
@@ -280,15 +257,15 @@ form input[type="text"] {
     font-size: 12px; 
     color: rgb(155, 159, 161); 
     display: flex;
-    flex-direction: column; /* Ensures that prices and affordability are stacked vertically */
-    align-items: center; /* Centers the header and the price plans */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 /* Prices: layout for the three blocks*/
 .price-wrapper ul {
     display: flex; /* spread horizontally */
     justify-content: center;
-    list-style-type: none; /*removes the bullet points from each link*/
+    list-style-type: none; 
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -334,7 +311,7 @@ form input[type="text"] {
                 rgba(0,0,0,0) 9px,
                 rgba(0,0,0,0.05) 10px);
     pointer-events: none; /* Allows clicks to pass through */
-    z-index: 2; /* Above the content but below interactive elements */
+    z-index: 2; /* Above the content but below clickable elements */
 }
 
 /* Prices: style for headers in the text area*/
@@ -369,8 +346,8 @@ form input[type="text"] {
     color: white;
     border: none;
     cursor: pointer;
-    z-index: 3; /* Ensure the button is clickable */
-    pointer-events: auto; /* Allow interactions on the button */
+    z-index: 3; /* so the button is clickable */
+    pointer-events: auto; /* allows interactions on the button */
 }
 
 
@@ -379,12 +356,12 @@ form input[type="text"] {
 .notebook-wrapper {
     display: block;
     position: relative;
-    display: inline-block; /* Allows for easy positioning around the image */
+    display: inline-block; 
     width: 100%;
     height: 100%;
     /* height:50vh; */
     overflow: hidden;
-    margin-bottom: 0; /* Ensure no space at the bottom */
+    margin-bottom: 0;
 }
 #notebook{
     display: block;
@@ -405,14 +382,14 @@ with flexbox used to center the text and button vertically and horizontally.*/
     height: 100%;
     background-color: rgba(0, 67, 105, 0.781);
 
-    color: white; /* Color for the text on the overlay */
-    display: flex; /*create a flexbox layout*/
+    color: white; /* Color for the text*/
+    display: flex; 
     flex-direction: column;
-    justify-content: center; /* Centers the content (text and button) */
+    justify-content: center; 
     align-items: center;
     z-index: 2;
     text-align: center;
-    pointer-events: none; /* Prevents the overlay from blocking image interactions, if needed */
+    pointer-events: none; /* Prevents the overlay from blocking image interactions in the future*/
 }
 
 .notebook-overlay h1 {
@@ -439,8 +416,8 @@ with flexbox used to center the text and button vertically and horizontally.*/
 
     border: none;
     cursor: pointer;
-    z-index: 3; /* Ensure the button is clickable */
-    pointer-events: auto; /* Allow interactions on the button */
+    z-index: 3; 
+    pointer-events: auto;
 }
 
 
@@ -451,10 +428,10 @@ with flexbox used to center the text and button vertically and horizontally.*/
     width: 100%;
     height: 260px;
     z-index: 2;
-    display: flex; /* Enables flexbox for centering */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     overflow: hidden;
     margin-top: -9px; 
 }
@@ -464,7 +441,7 @@ with flexbox used to center the text and button vertically and horizontally.*/
     font-family: Arial, sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    color: white; /* Make text visible against dark background */
+    color: white; 
     text-align: center;
 }
 
@@ -473,7 +450,7 @@ with flexbox used to center the text and button vertically and horizontally.*/
     font-family: Arial, sans-serif;
     font-weight: lighter;
     font-size: 10px;
-    color: white; /* Make text visible against dark background */
+    color: white; 
     text-align: center;
     /* margin-bottom: 15px; */
 }
@@ -488,7 +465,7 @@ with flexbox used to center the text and button vertically and horizontally.*/
 }
 
 .social-wrapper ul li img {
-    width: 28px; /* Adjust the size of the icons */
+    width: 28px; /* set the size of the icons */
     height: auto;
 }
 
